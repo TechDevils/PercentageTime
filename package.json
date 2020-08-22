@@ -1,0 +1,28 @@
+{
+  "name": "percenttime",
+  "version": "1.0.0",
+  "description": "Shows the date and time as a percentage",
+  "main": "percentageTime.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chadders13/PercentageTime.git"
+  },
+  "keywords": [
+    "time",
+    "date",
+    "datetime",
+    "percent",
+    "percentage",
+    "32bit",
+    "64bit"
+  ],
+  "author": "TechDevils",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chadders13/PercentageTime/issues"
+  },
+  "homepage": "https://github.com/Chadders13/PercentageTime#readme"
+}
