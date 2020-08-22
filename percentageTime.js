@@ -3,42 +3,42 @@ const _32BitInt = 2147483647000;
 const _secAndMinConst = 60;
 const _hourConst = 24;
 
-function getPeratageTimeToComplete64Bit(){
+function getPercentageTimeToComplete64Bit(){
     var timeNow = Date.now();
     return getPercentage(timeNow, _64BitInt);
 }
-function getPeratageTimeToComplete32Bit(){
+function getPercentageTimeToComplete32Bit(){
     var timeNow = Date.now();
     return getPercentage(timeNow, _32BitInt);
 }
 
-function getPerctageOfCurrentMin(timeNow){
+function getPercentageOfCurrentMin(timeNow){
     return getPercentage(timeNow.getUTCSeconds(), _secAndMinConst);
 }
-function getPerctageOfCurrentHour(timeNow, includeSubElement){
+function getPercentageOfCurrentHour(timeNow, includeSubElement){
     var addTime = 0;
 
     if(includeSubElement){
-        addTime = (getPerctageOfCurrentMin(timeNow)/100);
+        addTime = (getPercentageOfCurrentMin(timeNow)/100);
     }
 
     return getPercentage(timeNow.getUTCMinutes(), _secAndMinConst) + addTime;
 }
-function getPerctageOfCurrentHourMin(timeNow){
-    return getPerctageOfCurrentHour(timeNow, true);
+function getPercentageOfCurrentHourMin(timeNow){
+    return getPercentageOfCurrentHour(timeNow, true);
 }
-function getPerctageOfCurrentDay(timeNow, includeSubElement){
+function getPercentageOfCurrentDay(timeNow, includeSubElement){
     var addTime = 0;
 
     if(includeSubElement){
-        addTime = (getPerctageOfCurrentHourMin(timeNow) / 100);
+        addTime = (getPercentageOfCurrentHourMin(timeNow) / 100);
     }
     return getPercentage(timeNow.getUTCHours(), _hourConst) + addTime;
 }
-function getPerctageOfCurrentDayHourMin(timeNow){
-    return getPerctageOfCurrentDay(timeNow,true);
+function getPercentageOfCurrentDayHourMin(timeNow){
+    return getPercentageOfCurrentDay(timeNow,true);
 }
-function getPerctageOfCurrentYear(timeNow, includeSubElement){
+function getPercentageOfCurrentYear(timeNow, includeSubElement){
     var currentYear = new Date(timeNow.getUTCFullYear(),0,1);
     var numberOfDays = Math.ceil((timeNow.getTime() - currentYear + 1) / 86400000);
     var daysInTheYear = 365;
@@ -48,18 +48,18 @@ function getPerctageOfCurrentYear(timeNow, includeSubElement){
     var addTime = 0;
 
     if(includeSubElement){
-        addTime = ((getPerctageOfCurrentDayHourMin(timeNow) / 100)/daysInTheYear);
+        addTime = ((getPercentageOfCurrentDayHourMin(timeNow) / 100)/daysInTheYear);
     }
     return getPercentage(numberOfDays,daysInTheYear) + addTime;
 }
-function getPerctageOfCurrentYearDayHourMin(timeNow){
+function getPercentageOfCurrentYearDayHourMin(timeNow){
 
-    return getPerctageOfCurrentYear(timeNow, true);
+    return getPercentageOfCurrentYear(timeNow, true);
 }
-function getPerctageOfCurrentDecade(){
+function getPercentageOfCurrentDecade(){
 
 }
-function getPerctageOfCurrentCentury(){
+function getPercentageOfCurrentCentury(){
 
 }
 
@@ -68,13 +68,13 @@ function getPercentage(dividend, divisor){
 }
 
 module.exports = {
-    get32BitCompletion : getPeratageTimeToComplete32Bit,
-    get64BitCompletion : getPeratageTimeToComplete64Bit,
-    getPerctageOfCurrentMin:getPerctageOfCurrentMin,
-    getPerctageOfCurrentHour:getPerctageOfCurrentHour,
-    getPerctageOfCurrentHourMin :getPerctageOfCurrentHourMin,
-    getPerctageOfCurrentDay:getPerctageOfCurrentDay,
-    getPerctageOfCurrentDayHourMin:getPerctageOfCurrentDayHourMin,
-    getPerctageOfCurrentYear:getPerctageOfCurrentYear,
-    getPerctageOfCurrentYearDayHourMin:getPerctageOfCurrentYearDayHourMin
+    get32BitCompletion : getPercentageTimeToComplete32Bit,
+    get64BitCompletion : getPercentageTimeToComplete64Bit,
+    getPercentageOfCurrentMin:getPercentageOfCurrentMin,
+    getPercentageOfCurrentHour:getPercentageOfCurrentHour,
+    getPercentageOfCurrentHourMin :getPercentageOfCurrentHourMin,
+    getPercentageOfCurrentDay:getPercentageOfCurrentDay,
+    getPercentageOfCurrentDayHourMin:getPercentageOfCurrentDayHourMin,
+    getPercentageOfCurrentYear:getPercentageOfCurrentYear,
+    getPercentageOfCurrentYearDayHourMin:getPercentageOfCurrentYearDayHourMin
 }

@@ -2,7 +2,7 @@
 Show the time as a percentage.
 The seconds, mins, hours, days, months, years
 
-## how long until the 32bit date is reaced
+## how long until the 32bit date is reached
 ```
 var pt = require('./percentageTime')
 

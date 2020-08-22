@@ -12,13 +12,13 @@ showAllTimes(d5);
 
 function showAllTimes(d){
     console.log(d);
-    console.log(`perctageTo32BitInt: ${pt.get32BitCompletion()}%`);
-    console.log(`perctageTo64BitInt: ${pt.get64BitCompletion()}%`);
-    console.log(`getPerctageOfCurrentMin: ${pt.getPerctageOfCurrentMin(d)}%`);
-    console.log(`getPerctageOfCurrentHour: ${pt.getPerctageOfCurrentHour(d)}%`);
-    console.log(`getPerctageOfCurrentHour: ${pt.getPerctageOfCurrentHourMin(d)}%`);
-    console.log(`getPerctageOfCurrentDay: ${pt.getPerctageOfCurrentDay(d)}%`);
-    console.log(`getPerctageOfCurrentDay: ${pt.getPerctageOfCurrentDayHourMin(d)}%`);
-    console.log(`getPerctageOfCurrentYear: ${pt.getPerctageOfCurrentYear(d)}%`);
-    console.log(`getPerctageOfCurrentYear: ${pt.getPerctageOfCurrentYearDayHourMin(d)}%`);
+    console.log(`PercentageTo32BitInt: ${pt.get32BitCompletion()}%`);
+    console.log(`PercentageTo64BitInt: ${pt.get64BitCompletion()}%`);
+    console.log(`getPercentageOfCurrentMin: ${pt.getPercentageOfCurrentMin(d)}%`);
+    console.log(`getPercentageOfCurrentHour: ${pt.getPercentageOfCurrentHour(d)}%`);
+    console.log(`getPercentageOfCurrentHour: ${pt.getPercentageOfCurrentHourMin(d)}%`);
+    console.log(`getPercentageOfCurrentDay: ${pt.getPercentageOfCurrentDay(d)}%`);
+    console.log(`getPercentageOfCurrentDay: ${pt.getPercentageOfCurrentDayHourMin(d)}%`);
+    console.log(`getPercentageOfCurrentYear: ${pt.getPercentageOfCurrentYear(d)}%`);
+    console.log(`getPercentageOfCurrentYear: ${pt.getPercentageOfCurrentYearDayHourMin(d)}%`);
 }
