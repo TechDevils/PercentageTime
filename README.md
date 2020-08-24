@@ -12,6 +12,17 @@ var d = new Date();
 
 console.log(`getPercentageOfCurrentMin: ${pt.getPercentageOfCurrentMin(d)}%`);
 ```
+Using a set date and time
+
+```
+var pt = require('./percentageTime');
+
+var d = new Date(2002,5,15,4,10,15);
+
+console.log(`getPercentageOfCurrentMin: ${pt.getPercentageOfCurrentMin(d)}%`);
+```
+Will produce `getPercentageOfCurrentMin: 25%`
+
 Get the % of the current hour. There are two options.
 One will get only the current hour
 Two will get the current hour plus the minutes
@@ -49,6 +60,25 @@ var d = new Date();
 
 console.log(`getPercentageOfCurrentYear: ${pt.getPercentageOfCurrentYear(d)}%`);
 console.log(`getPercentageOfCurrentYear: ${pt.getPercentageOfCurrentYearDayHourMin(d)}%`);
+```
+
+## How long between these dates is there left ??
+
+```
+var d1 = new Date(2010,7,25,00,11,30);
+var d2 = new Date(2030,7,25,00,11,30);
+
+console.log(`diff dates ${pt.getPercentageBetweenToDays(d1,d2)}`);
+
+```
+Once the date has passed it will show there extra % over 100
+
+```
+var d1 = new Date(2010,7,25,00,11,30);
+var d2 = new Date(2019,7,25,00,11,30);
+
+console.log(`diff dates ${pt.getPercentageBetweenToDays(d1,d2)}`);
+
 ```
 
 ## how long until the 32bit date is reached

@@ -63,6 +63,14 @@ function getPercentageOfCurrentCentury(){
 
 }
 
+function getPercentageBetweenToDays(start, end){
+    var startTime = start.valueOf();
+    var endTime = end.valueOf() - startTime;
+    var currentTime = Date.now() - startTime;
+
+    return getPercentage(currentTime, endTime);
+}
+
 function getPercentage(dividend, divisor){
     return ((dividend / divisor) * 100);
 }
@@ -76,5 +84,6 @@ module.exports = {
     getPercentageOfCurrentDay:getPercentageOfCurrentDay,
     getPercentageOfCurrentDayHourMin:getPercentageOfCurrentDayHourMin,
     getPercentageOfCurrentYear:getPercentageOfCurrentYear,
-    getPercentageOfCurrentYearDayHourMin:getPercentageOfCurrentYearDayHourMin
+    getPercentageOfCurrentYearDayHourMin:getPercentageOfCurrentYearDayHourMin,
+    getPercentageBetweenToDays : getPercentageBetweenToDays
 }

@@ -10,6 +10,14 @@ showAllTimes(d4);
 var d5 = new Date('Feb 28 2013 19:00:10 GMT+0900'); 
 showAllTimes(d5);
 
+console.log(`diff dates ${pt.getPercentageBetweenToDays(d3,d2)}`);
+var d6 = new Date(2021,0,2,11,28,30);
+
+console.log(`diff dates ${pt.getPercentageBetweenToDays(d4,d6)}`);
+var d7 = new Date(2020,7,25,00,11,30);
+
+console.log(`diff dates ${pt.getPercentageBetweenToDays(d4,d7)}`);
+
 function showAllTimes(d){
     console.log(d);
     console.log(`PercentageTo32BitInt: ${pt.get32BitCompletion()}%`);

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Chadders13/PercentageTime.git"
+    "url": "git+https://github.com/TechDevils/PercentageTime.git"
   },
   "keywords": [
     "time",
@@ -22,7 +22,7 @@
   "author": "TechDevils",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Chadders13/PercentageTime/issues"
+    "url": "https://github.com/TechDevils/PercentageTime/issues"
   },
-  "homepage": "https://github.com/Chadders13/PercentageTime#readme"
+  "homepage": "https://github.com/TechDevils/PercentageTime#readme"
 }
