@@ -6,7 +6,7 @@ The seconds, mins, hours, days, months, years
 Get the % of the current Minute
 
 ```
-var pt = require('./percentageTime');
+var pt = require('percenttime');
 
 var d = new Date();
 
@@ -15,7 +15,7 @@ console.log(`getPercentageOfCurrentMin: ${pt.getPercentageOfCurrentMin(d)}%`);
 Using a set date and time
 
 ```
-var pt = require('./percentageTime');
+var pt = require('percenttime');
 
 var d = new Date(2002,5,15,4,10,15);
 
@@ -28,7 +28,7 @@ One will get only the current hour
 Two will get the current hour plus the minutes
 
 ```
-var pt = require('./percentageTime');
+var pt = require('percenttime');
 
 var d = new Date();
 
@@ -41,7 +41,7 @@ One will get only the current day
 Two will get the current day plus the hours and minuets
 
 ```
-var pt = require('./percentageTime');
+var pt = require('percenttime');
 
 var d = new Date();
 
@@ -54,7 +54,7 @@ One will get only the current year
 Two will get the current year plus the day, hours and minuets
 
 ```
-var pt = require('./percentageTime');
+var pt = require('percenttime');
 
 var d = new Date();
 
@@ -83,13 +83,13 @@ console.log(`diff dates ${pt.getPercentageBetweenToDays(d1,d2)}`);
 
 ## how long until the 32bit date is reached
 ```
-var pt = require('./percentageTime')
+var pt = require('percenttime')
 
 console.log(`perctageTo32BitInt: ${pt.get32BitCompletion()}%`);
 ```
 want to check 64bit time too
 ```
-var pt = require('./percentageTime')
+var pt = require('percenttime')
 
 console.log(`perctageTo64BitInt: ${pt.get64BitCompletion()}%`);
 ```
